@@ -19,7 +19,7 @@ bottone.addEventListener('click', function(){
 
   for (let i = 0; i < max; i++){
     if ( indexInput === mailConsentite[i]) {
-      (indexOutputTrue)
+      (indexOutputTrue = true)
     }
   }
   
