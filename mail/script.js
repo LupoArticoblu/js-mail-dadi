@@ -6,26 +6,24 @@ const mailConsentite = [
 const bottone = document.getElementById('y');
 
 //il valore scritto dall'utente
-let indexInput = document.querySelector('.x');
+const indexInput = document.querySelector('.x');
 
+alert("Bentornato!");
 //il valore che riporta il calcolatore (voglio restituire un alert che avvisi l'utente di una possibile verifica)
-let indexOutputTrue = alert("Bentornato!");
 
-//valori del array
-min = 0;
-max = mailConsentite.length - 1;
 
 bottone.addEventListener('click', function(){
-
-  for (let i = 0; i < max; i++){
-    if ( indexInput === mailConsentite[i]) {
-      (indexOutputTrue = true)
+  let indexOutputTrue = false; 
+  for (let i = 0; i < mailConsentite.length; i++){
+    if (indexInput.value === mailConsentite[i]) {
+      indexOutputTrue = true;
     }
   }
   
   if(indexOutputTrue){
-    alert(`Bentornato ${indexInput} =3`)
+    alert(`Bentornato ${indexInput.value} =3`)
   }else{
-    alert(`Spiacente ${indexInput}, non sei un utente riconosciuto`)
+    alert(`Spiacente ${indexInput.value}, non sei un utente riconosciuto`)
   }
+  indexInput.value = "";
 })
